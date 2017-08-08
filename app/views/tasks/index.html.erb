@@ -1,0 +1,13 @@
+<h1>Welcome to the Task manager</h1>
+<p>Here are all of your tasks</p>
+<p> <%= link_to "Add a new task", tasks_new_path %> </p>
+
+
+<% @tasks.each do |task|  %>
+<p>------------------------------------------------------</p>
+<p> Id: <%= task.id %> </p>
+<h2>Title: <%= task.title %> </h2>
+<p>Description:  <%= task.description %> </p>
+<p>Importance level: <%= task.importance %> </p>
+<%=  link_to "view more", task_path(task) %>
+<% end %>

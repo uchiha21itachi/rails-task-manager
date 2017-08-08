@@ -1,0 +1,7 @@
+
+<p> <%= @task.title %> </p>
+<p> <%= @task.description %></p>
+<p> <%= @task.importance %></p>
+<p><%= link_to "Edit the task", task_edit_path %></p>
+<p><%= link_to "Delete the task", task_delete_path(@task), method: :delete %></p>
+
